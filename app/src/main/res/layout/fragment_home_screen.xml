@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.HomeScreenFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary_dark"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="APP-NAME"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/appbarlayout">
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary_dark"
+            app:tabGravity="fill"
+            app:tabIconTint="@color/white"
+            app:tabIndicatorColor="@color/white"
+            app:tabInlineLabel="true"
+            app:tabMode="fixed"
+            app:tabTextColor="@color/white" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_below="@+id/tablayout"
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+</RelativeLayout>
+
+<!--<TextView-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:id="@+id/interestshow"-->
+<!--android:gravity="center"-->
+<!--android:textSize="20sp"-->
+<!--android:layout_gravity="center"/>-->
