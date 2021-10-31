@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="10dp"
+    android:id="@+id/suggest_list_card"
     android:layout_height="100dp"
-    android:id="@+id/my_text"
+    android:elevation="20dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</TextView>
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="default"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_text"/>
+
+</androidx.cardview.widget.CardView>
