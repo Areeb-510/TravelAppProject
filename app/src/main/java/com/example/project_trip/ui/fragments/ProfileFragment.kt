@@ -58,7 +58,7 @@ class ProfileFragment : Fragment() {
     }
 
     fun getplacesdata(){
-        val url = "http://f292-2405-201-600e-301e-5c6c-17be-3f3d-7031.ngrok.io/"
+        val url = "https://d234-2405-201-600e-301e-c871-ac13-6af2-86c9.eu.ngrok.io"
 
         val queue = Volley.newRequestQueue(context)
 
@@ -69,7 +69,7 @@ class ProfileFragment : Fragment() {
                 val placeArray = ArrayList<Places>()
                 for(i in 0 until response.length()){
                     val JSONObject = response.getJSONObject(i)
-                    val places = Places(JSONObject.getString("name"))
+                    val places = Places(JSONObject.getString("name"),"$url"+JSONObject.getString("image"),JSONObject.getString("state"),JSONObject.getString("country"))
 //                    Toast.makeText(activity,"${places.name}",Toast.LENGTH_SHORT).show()
                     placeArray.add(places)
                 }
